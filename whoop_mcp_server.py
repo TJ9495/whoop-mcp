@@ -144,7 +144,7 @@ def build_auth_url(state):
     if not WHOOP_CLIENT_ID:
         raise ValueError("WHOOP_CLIENT_ID is not set")
 
-    scopes = "offline"
+    scopes = "offline read:recovery read:cycles read:sleep"
     params = {
         "response_type": "code",
         "client_id": WHOOP_CLIENT_ID,
