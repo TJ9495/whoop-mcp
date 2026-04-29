@@ -79,7 +79,7 @@ def whoop_get(path: str, params: dict | None = None):
 def build_auth_url(state: str):
     if not WHOOP_CLIENT_ID:
         raise ValueError("WHOOP_CLIENT_ID is not set")
-    scopes = "read:recovery read:cycle read:sleep offline"
+    scopes = "offline"
     params = {
         "response_type": "code",
         "client_id": WHOOP_CLIENT_ID,
